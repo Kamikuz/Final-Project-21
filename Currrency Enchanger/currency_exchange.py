@@ -16,7 +16,7 @@ def main():
 	print("Initializing...")
 
 	# first exception handle
-	while error == 1:
+	while error == 1 or stop != 1:
 		try:
 			#request and get the json of currency list (Chinese Ver.)
 			currency_list_zh = requests.get('https://yxue.w3.uvm.edu/cs021/currency_list_zh.json')
@@ -25,39 +25,67 @@ def main():
 			#(English Ver.)
 			currency_list_en = requests.get('https://yxue.w3.uvm.edu/cs021/currency_list_en.json')
 			currency_list_en = currency_list_en.json()
+			stop = 1
 
 		except:
+			error = 1
 			#API error, try to get again
 			print('The api is broken or no connection, try later o(╥﹏╥)o')
-			error = 1
 
 
 		#intro info
 		print("\nWelcome to use the currency exchange system!\n")
 
-		language = int(input('Please choose the Language[English --> 0 | 简体中文 --> 1]: '))
+		language = int(input('Please choose the Language(请选择语言)[English --> 0 | 简体中文 --> 1]: '))
 
+		#English Mode
 		if language == 0:
-			print("\nHere is the code of currency:")
-			print("--","Currency Name","CODE",sep='\t|')
+			#list the currency and code
+			print("\nHere is the code of currency\n----------------------------")
+			print("#","CODE","Currency Name",sep='\t|')
+			print("----------------------------")
 			n = 1
 			for item in currency_list_en['list']:
-				
-				print(n,item['name'],item['code'],sep='\t|',end="\n")
+				print(n,item['code'],item['name'],sep='\t|',end="\n")
 				n += 1
 
-			#user input
-			origin_currency = input("Please enter the source currency(Code): ")
-			origin_currency = origin_currency.upper()
+			PASS = 0
+			while PASS == 0:
+				#user input the source currency
+				origin_currency = input("----------------------------\nPlease enter the source currency(Code): ")
+				#case insensitive
+				origin_currency = origin_currency.upper()
 
-			while not origin_currency.isalpha() and len(origin_currency)>3:
-				origin_currency = input("Invalid Code! Try again:")
+				#vailate the input
+				while not origin_currency.isalpha() or len(origin_currency)>3:
+					origin_currency = input("\nInvalid Code! Try again:")
+					origin_currency = origin_currency.upper()
 
-			target_currency = input("\nPlease enter the target currency you want to convert(Code): ")
-			target_currency = target_currency.upper()
-			while not target_currency.isalpha() and len(target_currency)>3:
-				origin_currency = input("Invalid Code! Try again:")
-		
+				for i in currency_list_en['list']:
+					if origin_currency == i['code']:
+						PASS = 1
+				
+				if PASS == 0:
+					print("\nThe currency does not exist, try again!")
+
+			PASS = 0
+			while PASS == 0:
+				#user input the convert currency
+				target_currency = input("\nPlease enter the target currency you want to convert(Code): ")
+				target_currency = target_currency.upper()
+
+				#vailate the input
+				while not target_currency.isalpha() or len(target_currency)>3:
+					origin_currency = input("\nInvalid Code! Try again:")
+					target_currency = target_currency.upper()
+
+				for i in currency_list_en['list']:
+					if target_currency == i['code']:
+						PASS = 1
+
+				if PASS == 0:
+					print("\nThe currency does not exist, try again!")
+			
 			print("Loading(*￣︶￣)...")
 
 			#call the request fun to get the rate
@@ -65,6 +93,9 @@ def main():
 
 			#promot the user to input the amount
 			amount = float(input("\nPlease enter the number you want to convert: "))
+			
+			while amount <=0.0:
+				amount = float(input("\nPlease input the valid amount:"))			
 
 			#calculate
 			reuslt_amount = amount * RATE
@@ -72,29 +103,66 @@ def main():
 			#call the output function to give the result
 			output_en(origin_currency,target_currency,RATE,reuslt_amount,amount)
 
+			stop = int(input('Enchange again？(Yes--> 0 | No(Quit)--> 1): '))
+
+		#Chinese Mode
 		elif language == 1:
-			print("\n下面是货币列表及其代码:")
+			#list the currency and code
+			print("\n货币列表及其代号\n----------------------------")
+			print("序号","代号","货币名称",sep='\t|')
+			print("----------------------------")
 			n = 1
 			for item in currency_list_zh['data']:
-				print(n,item['code'],item['name'],sep='\t|',end='\n')
+				print(n,item['code'],item['name'],sep='\t|',end="\n")
 				n += 1
 
-			#user input
-			origin_currency = input("请输入原货币的代码: ")
-			origin_currency = origin_currency.upper()
-			while not origin_currency.isalpha() and len(origin_currency)>3:
-				origin_currency = input("Invalid Code! Try again:")
+			PASS = 0
+			while PASS == 0:
+				#user input the source currency
+				origin_currency = input("----------------------------\n请输入原货币的代号: ")
+				#case insensitive
+				origin_currency = origin_currency.upper()
+
+				#vailate the input
+				while not origin_currency.isalpha() or len(origin_currency)>3:
+					origin_currency = input("\n无效代号，请重新输入:")
+					origin_currency = origin_currency.upper()
+
+				for i in currency_list_en['list']:
+					if origin_currency == i['code']:
+						PASS = 1
+				
+				if PASS == 0:
+					print("\n货币不存在，请重新输入货币代号!")
+
+			PASS = 0
+			while PASS == 0:
+				#user input the convert currency
+				target_currency = input("\n请输入想要转换的货币代号: ")
+				target_currency = target_currency.upper()
+
+				#vailate the input
+				while not target_currency.isalpha() or len(target_currency)>3:
+					origin_currency = input("\n无效代号，请重新输入:")
+					target_currency = target_currency.upper()
+
+				for i in currency_list_zh['data']:
+					if target_currency == i['code']:
+						PASS = 1
+
+				if PASS == 0:
+					print("\n货币不存在，请重新输入货币代号!")
 			
-			target_currency = input("\n请输入想要转换的货币代码: ")
-			target_currency = target_currency.upper()
-		
-			print("请稍等(*￣︶￣)...")
+			print("稍等(*^▽^*)")
 
 			#call the request fun to get the rate
 			RATE = float(request(origin_currency,target_currency))
 
 			#promot the user to input the amount
-			amount = float(input("\n请输入转换金额: "))
+			amount = float(input("\n请输入想要转换的货币金额： "))
+
+			while amount <=0.0:
+				amount = float(input("\n请输入正确的金额： "))
 
 			#calculate
 			reuslt_amount = amount * RATE
@@ -102,9 +170,11 @@ def main():
 			#call the output function to give the result
 			output_zh(origin_currency,target_currency,RATE,reuslt_amount,amount)
 
+			stop = int(input('重新转换？(是--> 0 | 否(退出)--> 1): '))
+
 		else:
 			error = 1
-			print("Invalid Choice, try again")
+			print("选择不存在，请重试！")
 
 
 def request(x,y):
@@ -126,6 +196,7 @@ def request(x,y):
 	#retutn the data
 	return z
 
+#english output
 def output_en(a,b,c,d,e):
 	#format the data
 	d = format(d,'.3f')
@@ -138,6 +209,7 @@ def output_en(a,b,c,d,e):
 	print("\nThe rate is:\t",c)
 	print("----------------------------------")
 
+#chinese output
 def output_zh(a,b,c,d,e):
 	#format the data
 	d = format(d,'.3f')
