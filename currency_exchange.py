@@ -30,9 +30,11 @@ def main():
 
 	if language == 0:
 		print("\nHere is the code of currency:")
+		print("--","Currency Name","CODE",sep='\t|')
 		n = 1
 		for item in currency_list_en['list']:
-			print(n,item['code'],item['name'],sep='\t|',end='\n')
+			
+			print(n,item['name'],item['code'],sep='\t|',end="\n")
 			n += 1
 
 		#user input
@@ -54,7 +56,7 @@ def main():
 		reuslt_amount = amount * RATE
 
 		#call the output function to give the result
-		output(origin_currency,target_currency,RATE,reuslt_amount,amount)
+		output_en(origin_currency,target_currency,RATE,reuslt_amount,amount)
 
 	elif language == 1:
 		print("\n下面是货币列表及其代码:")
@@ -82,7 +84,7 @@ def main():
 		reuslt_amount = amount * RATE
 
 		#call the output function to give the result
-		output(origin_currency,target_currency,RATE,reuslt_amount,amount)
+		output_zh(origin_currency,target_currency,RATE,reuslt_amount,amount)
 
 	else:
 		error = 1
@@ -107,7 +109,7 @@ def request(x,y):
 	#retutn the data
 	return z
 
-def output(a,b,c,d,e):
+def output_en(a,b,c,d,e):
 	#format the data
 	d = format(d,'.3f')
 	e = format(e,'.3f')
@@ -117,6 +119,18 @@ def output(a,b,c,d,e):
 	print("Original Currency:\t",e,a)
 	print("\nConvert Currency:\t",d,b)
 	print("\nThe rate is:\t",c)
+	print("----------------------------------")
+
+def output_zh(a,b,c,d,e):
+	#format the data
+	d = format(d,'.3f')
+	e = format(e,'.3f')
+
+	#print them
+	print("--------------Result--------------")
+	print("原货币:\t",e,a)
+	print("\n转换货币及金额:\t",d,b)
+	print("\n汇率:\t",c)
 	print("----------------------------------")
 
 #excute
