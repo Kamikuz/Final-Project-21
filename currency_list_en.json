@@ -1,302 +1,304 @@
 {
-	"USD": {
+	"list":[
+	{
 		"name": "US Dollar",
-		"code": "USD",
+		"code": "USD"
 	},
-	"CNY": {
+	{
 		"name": "Chinese Yuan",
-		"code": "CNY",
+		"code": "CNY"
 	},
-	"EUR": {
+	{
 		"name": "Euro",
-		"code": "EUR",
+		"code": "EUR"
 	},
-	"GBP": {
+	{
 		"name": "British Pound Sterling",
-		"code": "GBP",
+		"code": "GBP"
 	},
-	"HKD": {
+	{
 		"name": "Hong Kong Dollar",
-		"code": "HKD",
+		"code": "HKD"
 	},
-	"MOP": {
+	{
 		"name": "Macanese Pataca",
-		"code": "MOP",
+		"code": "MOP"
 	},
-	"TWD": {
+	{
 		"name": "New Taiwan Dollar",
-		"code": "TWD",
+		"code": "TWD"
 	},
-	"JPY": {
+	{
 		"name": "Japanese Yen",
-		"code": "JPY",
+		"code": "JPY"
 	},
-	"CAD": {
+	{
 		"name": "Canadian Dollar",
-		"code": "CAD",
+		"code": "CAD"
 	},
-	"AUD": {
+	{
 		"name": "Australian Dollar",
-		"code": "AUD",
+		"code": "AUD"
 	},
-	"KRW": {
+	{
 		"name": "South Korean Won",
-		"code": "KRW",
+		"code": "KRW"
 	},
-	"THB": {
+	{
 		"name": "Thai Baht",
-		"code": "THB",
+		"code": "THB"
 	},
-	"VND": {
+	{
 		"name": "Vietnamese Dong",
-		"code": "VND",
+		"code": "VND"
 	},
-	"DKK": {
+	{
 		"name": "Danish Krone",
-		"code": "DKK",
+		"code": "DKK"
 	},
-	"CHF": {
+	{
 		"name": "Swiss Franc",
-		"code": "CHF",
+		"code": "CHF"
 	},
-	"SGD": {
+	{
 		"name": "Singapore Dollar",
-		"code": "SGD",
+		"code": "SGD"
 	},
-	"SEK": {
+	{
 		"name": "Swedish Krona",
-		"code": "SEK",
+		"code": "SEK"
 	},
-	"PHP": {
+	{
 		"name": "Philippine Peso",
-		"code": "PHP",
+		"code": "PHP"
 	},
-	"NOK": {
+	{
 		"name": "Norwegian Krone",
-		"code": "NOK",
+		"code": "NOK"
 	},
-	"DZD": {
+	{
 		"name": "Algerian Dinar",
-		"code": "DZD",
+		"code": "DZD"
 	},
-	"ARS": {
+	{
 		"name": "Argentine Peso",
-		"code": "ARS",
+		"code": "ARS"
 	},
-	"BHD": {
+	{
 		"name": "Bahraini Dinar",
-		"code": "BHD",
+		"code": "BHD"
 	},
-	"BDT": {
+	{
 		"name": "Bangladeshi Taka",
-		"code": "BDT",
+		"code": "BDT"
 	},
-	"BYR": {
+	{
 		"name": "Belarusian Ruble",
-		"code": "BYR",
+		"code": "BYR"
 	},
-	"BMD": {
+	{
 		"name": "Bermudian Dollar",
-		"code": "BMD",
+		"code": "BMD"
 	},
-	"BTN": {
+	{
 		"name": "Bhutanese ngultrum",
-		"code": "BTN",
+		"code": "BTN"
 	},
-	"BWP": {
+	{
 		"name": "Botswana pula",
-		"code": "BWP",
+		"code": "BWP"
 	},
-	"BRL": {
+	{
 		"name": "Brazilian Real",
-		"code": "BRL",
+		"code": "BRL"
 	},
-	"BND": {
+	{
 		"name": "Brunei Dollar",
-		"code": "BND",
+		"code": "BND"
 	},
-	"BGN": {
+	{
 		"name": "Bulgarian Lev",
-		"code": "BGN",
+		"code": "BGN"
 	},
-	"KHR": {
+	{
 		"name": "Cambodian Riel",
-		"code": "KHR",
+		"code": "KHR"
 	},
-	"CLP": {
+	{
 		"name": "Chilean Peso",
-		"code": "CLP",
+		"code": "CLP"
 	},
-	"COP": {
+	{
 		"name": "Colombian Peso",
-		"code": "COP",
+		"code": "COP"
 	},
-	"CRC": {
+	{
 		"name": "Costa Rican Colón",
-		"code": "CRC",
+		"code": "CRC"
 	},
-	"HRK": {
+	{
 		"name": "Croatian Kuna",
-		"code": "HRK",
+		"code": "HRK"
 	},
-	"CUP": {
+	{
 		"name": "Cuban peso",
-		"code": "CUP",
+		"code": "CUP"
 	},
-	"CZK": {
+	{
 		"name": "Czech Republic Koruna",
-		"code": "CZK",
+		"code": "CZK"
 	},
-	"EGP": {
+	{
 		"name": "Egyptian Pound",
-		"code": "EGP",
+		"code": "EGP"
 	},
-	"GTQ": {
+	{
 		"name": "Guatemalan Quetzal",
-		"code": "GTQ",
+		"code": "GTQ"
 	},
-	"HUF": {
+	{
 		"name": "Hungarian Forint",
-		"code": "HUF",
+		"code": "HUF"
 	},
-	"INR": {
+	{
 		"name": "Indian Rupee",
-		"code": "INR",
+		"code": "INR"
 	},
-	"IDR": {
+	{
 		"name": "Indonesian Rupiah",
-		"code": "IDR",
+		"code": "IDR"
 	},
-	"IQD": {
+	{
 		"name": "Iraqi Dinar",
-		"code": "IQD",
+		"code": "IQD"
 	},
-	"ILS": {
+	{
 		"name": "Israeli New Sheqel",
-		"code": "ILS",
+		"code": "ILS"
 	},
-	"JMD": {
+	{
 		"name": "Jamaican Dollar",
-		"code": "JMD",
+		"code": "JMD"
 	},
-	"JOD": {
+	{
 		"name": "Jordanian Dinar",
-		"code": "JOD",
+		"code": "JOD"
 	},
-	"KES": {
+	{
 		"name": "Kenyan Shilling",
-		"code": "KES",
+		"code": "KES"
 	},
-	"KWD": {
+	{
 		"name": "Kuwaiti Dinar",
-		"code": "KWD",
+		"code": "KWD"
 	},
-	"LAK": {
+	{
 		"name": "Lakh",
-		"code": "LAK",
+		"code": "LAK"
 	},
-	"LBP": {
+	{
 		"name": "Lebanese Pound",
-		"code": "LBP",
+		"code": "LBP"
 	},
-	"LTL": {
+	{
 		"name": "Lithuanian Litas",
-		"code": "LTL",
+		"code": "LTL"
 	},
-	"MYR": {
+	{
 		"name": "Malaysian Ringgit",
-		"code": "MYR",
+		"code": "MYR"
 	},
-	"MXN": {
+	{
 		"name": "Mexican Peso",
-		"code": "MXN",
+		"code": "MXN"
 	},
-	"MNT": {
+	{
 		"name": "Mongolian tögrög",
-		"code": "MNT",
+		"code": "MNT"
 	},
-	"MAD": {
+	{
 		"name": "Moroccan Dirham",
-		"code": "MAD",
+		"code": "MAD"
 	},
-	"MMK": {
+	{
 		"name": "Myanma Kyat",
-		"code": "MMK",
+		"code": "MMK"
 	},
-	"OMR": {
+	{
 		"name": "Omani Rial",
-		"code": "OMR",
+		"code": "OMR"
 	},
-	"PKR": {
+	{
 		"name": "Pakistani Rupee",
-		"code": "PKR",
+		"code": "PKR"
 	},
-	"PEN": {
+	{
 		"name": "Peruvian Nuevo Sol",
-		"code": "PEN",
+		"code": "PEN"
 	},
-	"PLN": {
+	{
 		"name": "Polish Zloty",
-		"code": "PLN",
+		"code": "PLN"
 	},
-	"QAR": {
+	{
 		"name": "Qatari Rial",
-		"code": "QAR",
+		"code": "QAR"
 	},
-	"RON": {
+	{
 		"name": "Romanian Leu",
-		"code": "RON",
+		"code": "RON"
 	},
-	"RUB": {
+	{
 		"name": "Russian Ruble",
-		"code": "RUB",
+		"code": "RUB"
 	},
-	"RSD": {
+	{
 		"name": "Serbian Dinar",
-		"code": "RSD",
+		"code": "RSD"
 	},
-	"SOS": {
+	{
 		"name": "Somali Shilling",
-		"code": "SOS",
+		"code": "SOS"
 	},
-	"ZAR": {
+	{
 		"name": "South African Rand",
-		"code": "ZAR",
+		"code": "ZAR"
 	},
-	"LKR": {
+	{
 		"name": "Sri Lankan Rupee",
-		"code": "LKR",
+		"code": "LKR"
 	},
-	"SYP": {
+	{
 		"name": "Syrian Pound",
-		"code": "SYP",
+		"code": "SYP"
 	},
-	"TZS": {
+	{
 		"name": "Tanzanian Shilling",
-		"code": "TZS",
+		"code": "TZS"
 	},
-	"NZD": {
+	{
 		"name": "New Zealand Dollar",
-		"code": "NZD",
+		"code": "NZD"
 	},
-	"TND": {
+	{
 		"name": "Tunisian Dinar",
-		"code": "TND",
+		"code": "TND"
 	},
-	"TRY": {
+	{
 		"name": "Turkish Lira",
-		"code": "TRY",
+		"code": "TRY"
 	},
-	"AED": {
+	{
 		"name": "United Arab Emirates dirham",
-		"code": "AED",
+		"code": "AED"
 	},
-	"UGX": {
+	{
 		"name": "Ugandan Shilling",
-		"code": "UGX",
+		"code": "UGX"
 	},
-	"UYU": {
+	{
 		"name": "Uruguayan Peso",
-		"code": "UYU",
+		"code": "UYU"
 	}
+	]
 }
