@@ -27,22 +27,7 @@ e1.grid(row=0, column=1)
 e2.grid(row=1, column=1)
 e3.grid(row=2, column=1)
 
-button = tkinter.Button(root,text='Submit',width=25,command=request)
+button = tkinter.Button(root,text='Submit',width=25)
 
-def request():
-	post_data = {'appid':'01b615dcc108bd15c022160f14627541'}
-	post_data['form'] = x
-	post_data['to'] = y
-	response = requests.get('https://api.shenjian.io/exchange/currency',post_data)
-	response = response.json()
-	RATE = response['data']['rate']
-	RATE = float(RATE)
-	z = float(z)
-	target_num = z * RATE
-	Result = "--------Result--------\nOriginal Currency:"+x+"\nConvert Currency:"+y+target_num+"\nThe rate is:"+RATE+"\n----------------------"
-	messageVar = Message(root, text = Result) 
-	messageVar.config(bg='lightgreen') 
-	messageVar.pack( )
-	return
 
 mainloop()
