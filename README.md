@@ -5,6 +5,7 @@ CS021 Final Project
 |--------------|
 | Kamiku Xue   |
 | Haoyuan Pang |
+| Mark Zuo     |
 
 Porjects
 
