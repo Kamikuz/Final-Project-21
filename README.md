@@ -12,4 +12,3 @@ Porjects
 | App Name     | Intro             | Developer| Status |
 |--------------|-------------------|----------|--------|
 | Currency Exchanger| A app to convert the currency with live rate. | Kamiku Xue | 进行中 |
-|--------------|-------------------|----------|--------|
