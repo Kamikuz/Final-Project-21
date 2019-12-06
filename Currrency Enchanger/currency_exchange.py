@@ -134,14 +134,17 @@ def English(x):
 
 	STOP = input('Exchange again？(y/n): ')
 	STOP = STOP.lower()
+
+	while STOP != 'y' and  STOP != 'n':
+		STOP = input('Exchange again？(y/n): ')
+		STOP = STOP.lower()
 	
 	if STOP == 'y':
-		z = False
+		return False
 
 	elif STOP == 'n':
-		z = True
 		print("\nSee you!")
-	return z
+		return True
 
 def Chinese(x):
 	#list the currency and code
@@ -215,13 +218,18 @@ def Chinese(x):
 	output_zh(origin_currency,target_currency,RATE,reuslt_amount,amount)
 
 	STOP = input('重新转换？(y/n): ')
+	STOP = STOP.lower()
+
+	while STOP != 'y' and  STOP != 'n':
+		STOP = input('重新转换？(y/n): ')
+		STOP = STOP.lower()
+
 	if STOP == 'y':
-		z = False
+		return False
 
 	elif STOP == 'n':
 		print("\n再见!")
-		z = True
-	return z
+		return True
 
 def request(x,y):
 	#import the appid to get the api
